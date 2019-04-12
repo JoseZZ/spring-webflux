@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Numeros</title>
+</head>
+<body>
+  <div id="resultado"></div>
+  <script type="text/javascript">
+    /*
+     * EventSource es una clase del API server-sent event que permite abrir una conexión al servidor
+     * y recibir eventos de él. Esto cambia un poco a lo que estamos acostumbrados con AJAX donde el
+     * cliente es el que periódicamente consulta al servidor. Aquí es el servidor el que informa al
+     * cliente cuando existen nuevos flujos que transmitir.
+     */
+    var source = new EventSource("numeros");
+
+    source.addEventListener('message', function (e) {
+      document.getElementById("resultado").innerHTML += event.data + "<br>"
+    }, false);
+
+    source.addEventListener('open', function (e) {
+      console.log("INICIO");
+    }, false);
+
+    source.addEventListener('error', function (e) {
+      if (e.readyState == EventSource.CLOSED) {
+        console.log("close");
+      }
+    }, false);
+
+  </script>
+</body>
+</html>
