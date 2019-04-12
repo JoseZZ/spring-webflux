@@ -2,3 +2,13 @@
 webflux_multiplicar/mvnw
 webflux_multiplicar/mvnw.cmd
 *.jar
+webflux_reactive_service/build.gradle
+webflux_reactive_service/mvnw
+webflux_reactive_service/gradlew.bat
+webflux_reactive_service/gradlew
+webflux_reactive_service/mvnw.cmd
+*.class
+*.original
+*.lst
+webflux_reactive_service/target/surefire-reports/hello.GreetingRouterTest.txt
+webflux_reactive_service/target/surefire-reports/2019-04-12T12-52-01_215-jvmRun1.dump
