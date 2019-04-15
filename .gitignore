@@ -12,3 +12,8 @@ webflux_reactive_service/mvnw.cmd
 *.lst
 webflux_reactive_service/target/surefire-reports/hello.GreetingRouterTest.txt
 webflux_reactive_service/target/surefire-reports/2019-04-12T12-52-01_215-jvmRun1.dump
+webflux-books/.mvn/wrapper/maven-wrapper.jar
+webflux-books/mvnw
+webflux-books/mvnw.cmd
+*.prefs
+webflux_reactive_service/gs-reactive-rest-service.iml
