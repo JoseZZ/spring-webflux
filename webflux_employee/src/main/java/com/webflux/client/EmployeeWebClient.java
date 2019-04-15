@@ -7,6 +7,7 @@ import reactor.core.publisher.Mono;
 
 public class EmployeeWebClient {
 
+    // WebClient es un cliente no bloqueante con soporte para reactive streams
     WebClient client = WebClient.create("http://localhost:8090");
     
     public void consume() {
