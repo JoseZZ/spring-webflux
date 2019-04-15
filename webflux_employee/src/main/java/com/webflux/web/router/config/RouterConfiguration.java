@@ -36,23 +36,23 @@ public class RouterConfiguration{
     public RouterFunction<ServerResponse> monoRouterFunction() {
     	
      RouterFunction<ServerResponse>routerFunction=  RouterFunctions.		
-              route(GET("/emp/controller/getDetails").
+              route(GET("/employees").
               and(accept(MediaType.APPLICATION_JSON)),          
               employeeHandler::getEmployeeDetails)
     			
-            .andRoute(GET("/emp/controller/getDetailsById/{id}")
+            .andRoute(GET("/employees/{id}")
             .and(accept(MediaType.APPLICATION_JSON)),            
              employeeHandler::getEmployeeDetailByEmployeeId)
     
-            .andRoute(POST("/emp/controller/addEmp")
+            .andRoute(POST("/employees")
             .and(accept(MediaType.APPLICATION_JSON)), 
             employeeHandler::addEmployee)
     					
-            .andRoute(PUT("/emp/controller/updateEmp")
+            .andRoute(PUT("/employees")
             .and(accept(MediaType.APPLICATION_JSON)), 
             employeeHandler::updateEmployee)
     					
-            .andRoute(DELETE("/emp/controller/deleteEmp/{id}")
+            .andRoute(DELETE("/employees/{id}")
             .and(accept(MediaType.APPLICATION_JSON)), 
             employeeHandler::deleteEmployee);
 
