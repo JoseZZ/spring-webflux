@@ -17,3 +17,6 @@ webflux-books/mvnw
 webflux-books/mvnw.cmd
 *.prefs
 webflux_reactive_service/gs-reactive-rest-service.iml
+webflux-reactive-rest-api/mvnw
+*.cmd
+*.md
