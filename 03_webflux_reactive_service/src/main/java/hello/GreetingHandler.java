@@ -13,6 +13,7 @@ public class GreetingHandler {
 
 	// We use a handler to handle the request and create a response
 	public Mono<ServerResponse> hello(ServerRequest request) {
+		// Introducimos un retardo para comprobar si se bloquea el hilo
 		return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN)
 			.body(BodyInserters.fromObject("Hello, Spring!"));
 	}
